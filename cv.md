@@ -1,5 +1,6 @@
 # Ivan Bortnik
-## My Contact Info:
+
+### My Contact Info:
 
 * **Phone:** +375 29 5749996
 * **E-mail:** [Disturbe2011@yandex.ru](Disturbe2011@yandex.ru)
@@ -15,14 +16,15 @@ I am 37 years old. I am frontend web developer.
     * Team playing
 
 
-## Skills
+### Skills
 * HTML
 * CSS / SCSS
 * JavaScript
 * React / Express / Node 
 * Git / GitHub
 * Photoshop / Illustrator / Figma
-## Code Examples
+
+### Code Examples
 
 ```
  async login (req,res)  {
@@ -48,10 +50,11 @@ I am 37 years old. I am frontend web developer.
 
 ```
 
-## Education
+### Education
 * **IT STEP Academy**
     * Frontend development
-## Languages
+    
+### Languages
 * **Belorussian** - native speaker.
 * **Russian** - native speaker.
 * **English** - A2 (B1 in process...)
