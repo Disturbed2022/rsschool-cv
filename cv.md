@@ -19,9 +19,9 @@ I am 37 years old. I am frontend web developer.
 * HTML
 * CSS / SCSS
 * JavaScript
-* React
+* React / Express / Node 
 * Git / GitHub
-* Photoshop, Figma
+* Photoshop / Illustrator / Figma
 ## Code Examples
 ```
  async login (req,res)  {
