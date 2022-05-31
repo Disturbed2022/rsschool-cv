@@ -13,7 +13,7 @@ I am 37 years old. I am frontend web developer.
     * Quick learner
     * Diligence
     * Team playing
-> **Keep learning...**
+
 
 ## Skills
 * HTML
