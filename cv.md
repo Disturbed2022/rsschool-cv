@@ -23,6 +23,7 @@ I am 37 years old. I am frontend web developer.
 * Git / GitHub
 * Photoshop / Illustrator / Figma
 ## Code Examples
+
 ```
  async login (req,res)  {
      try{
@@ -46,6 +47,7 @@ I am 37 years old. I am frontend web developer.
  }
 
 ```
+
 ## Education
 * **IT STEP Academy**
     * Frontend development
