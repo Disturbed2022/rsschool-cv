@@ -1,0 +1,526 @@
+@import "./normalize.css";
+
+:root {
+  --green: #24cd03;
+  --purple: #C792EA;
+  --red: #F78C6C;
+  --blue: #82AAFF;
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.red {
+  color: var(--red);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.green {
+  color: var(--green);
+}
+
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Thin.woff2") format("woff2"),
+  url("../assets/fonts/Lato-Thin.woff") format("woff"),
+  url("../assets/fonts/Lato-Thin.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Regular.woff2") format("woff2"),
+  url("../assets/fonts/Lato-Regular.woff") format("woff"),
+  url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Bold.woff2") format("woff2"),
+  url("../assets/fonts/Lato-Bold.woff") format("woff"),
+  url("../assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #000300;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all .2s ease-in;
+
+}
+
+a:hover {
+  color: var(--green);
+  transition: all .2s ease-in;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .8);
+}
+
+.header__logo {
+  filter: invert(100%)
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__menu {
+  display: none;
+  background-image: url("../assets/svg/burger.svg");
+  background-color: black;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.header__menu.active {
+  background-image: url("../assets/svg/close.svg");
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__item {
+  margin-left: 20px;
+}
+
+.header__link {
+  padding: 5px 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.top {
+  padding: 10rem 0;
+}
+
+.top__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.top__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top__avatar-image {
+  border-radius: 1rem;
+}
+
+.top__title {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+
+.top__subtitle {
+  font-size: 2rem;
+  color: var(--green);
+}
+
+.top__contacts {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+
+}
+
+.top__email img, .top__github img, .top__linkedin img {
+  filter: invert(100%);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.top__email, .top__github, .top__linkedin {
+  margin-bottom: .5rem;
+  padding: .5rem 0;
+}
+
+.about, .edu, .skills, .experience, .languages, .code, .projects {
+  padding: 4rem 0;
+}
+
+
+.about__title, .edu__title, .skills__title, .experience__title, .languages__title, .code__title, .projects__title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about__text {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.edu__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.edu__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.edu__item span, .experience__item span {
+  font-size: .8rem;
+  font-weight: 300;
+  letter-spacing: .1rem;
+}
+
+.edu__item-title, .experience__item-title, .languages__item-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--green);
+  text-align: center;
+}
+
+.edu__item-specialty {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, .6);
+  margin-bottom: .5rem;
+}
+
+.skills__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.skills__subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.skills__list {
+  font-size: 1.5rem;
+  padding: 2rem;
+
+}
+
+.skills__item {
+  border: 1px solid var(--green);
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+
+}
+
+.experience__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.experience__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.experience__item-title {
+  text-align: left;
+}
+
+.experience__item-place {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, .6);
+  margin-bottom: .5rem;
+}
+
+.languages__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.languages__item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.languages__item:not(:last-child) {
+  border-right: 1px solid var(--green);
+}
+
+.languages__item-level {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, .6);
+}
+
+.projects__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projects__item {
+  border: 1px solid var(--green);
+}
+
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footer__logo, .footer__link > img {
+  filter: invert(100%);
+}
+
+.footer__link img {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .header__nav {
+    position: absolute;
+    right: 100px;
+    top: -300px;
+    z-index: 666;
+    border-radius: 15px;
+    transition: top 0.5s;
+    border: 1px solid #ffffff;
+    background: black;
+  }
+
+  .header__nav.active {
+    top: 30px;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__list {
+    flex-direction: column;
+  }
+
+  .header__item {
+    margin: 0;
+  }
+
+  .header__link {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+
+  .top {
+    padding: 70px 0 1rem 0;
+  }
+
+  .top__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .top__content {
+    text-align: center;
+  }
+
+  .top__title {
+    font-size: 2.5rem;
+  }
+
+  .top__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .top__contacts {
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem auto 0;
+    font-size: 1rem;
+    align-items: center;
+  }
+
+
+  .about__title, .edu__title, .skills__title, .experience__title, .languages__title, .code__title, .projects__title {
+    font-size: 2.5rem;
+  }
+
+  .about__text {
+    font-size: 1rem;
+  }
+
+  .edu__list, .skills__wrapper, .experience__wrapper {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .edu__item-title, .experience__item-title, .languages__item-title {
+    font-size: 1.5rem;
+  }
+
+  .edu__item-specialty, .experience__item-place {
+    font-size: 1.2rem;
+  }
+
+  .skills__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .skills__list {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .experience__item-title {
+    text-align: center;
+  }
+
+  .experience__item {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .languages__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .languages__item {
+    flex-direction: column;
+  }
+
+  .languages__item:not(:last-child) {
+    border-right: none;
+  }
+
+  .languages__item-level {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .6);
+  }
+
+  .projects__wrapper {
+    flex-direction: column;
+  }
+
+  .projects__item {
+    margin-bottom: 1rem;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__wrapper a {
+    margin-bottom: .5rem;
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  code {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  code {
+    font-size: .6rem;
+  }
+}
+
+
+
