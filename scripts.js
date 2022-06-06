@@ -26,4 +26,4 @@ menu.addEventListener('click', (e) => {
     toggleMenu()
   }
 })
-
+console.log('Total score +120 points')
